@@ -1,8 +1,7 @@
 const rule = require("../../../lib/rules/moment-parse-options");
 const { RuleTester } = require("eslint");
 
-const MOMENT_LITERAL_EXCEPTION = "Variable which require moment module must be called 'moment'";
-const MOMENT_TIMEZONE_EXCEPTION = "Must use moment.utc or moment.tz instead of default moment constructor";
+const { MOMENT_TIMEZONE_EXCEPTION, MOMENT_LITERAL_EXCEPTION } = require('../../../const');
 
 RuleTester.setDefaultConfig({
     parserOptions: {
