@@ -7,13 +7,14 @@ Examples of **incorrect** code for this rule:
 
 ```js
 
-const momentModule = require("moment");
+const literal = require("moment");
 
 ```
 
 ```js
 
 moment();
+moment("19/09/2020");
 
 ```
 
@@ -27,8 +28,12 @@ const moment = require("moment");
 
 ```js
 
+// UTC
 moment.utc();
+moment.utc("19/09/2020");
 
+// TimeZone
 moment.tz();
+moment.tz("19/09/2020", "Europe/Kiev");
 
 ```
