@@ -4,11 +4,18 @@ const { RuleTester } = require("eslint");
 const MOMENT_LITERAL_EXCEPTION = "Variable which require moment module must be called 'moment'";
 const MOMENT_TIMEZONE_EXCEPTION = "Must use moment.utc or moment.tz instead of default moment constructor";
 
+RuleTester.setDefaultConfig({
+    parserOptions: {
+        ecmaVersion: 6,
+        sourceType: "module",
+    }
+});
+
 const ruleTester = new RuleTester();
 ruleTester.run("moment-parse-options", rule, {
     valid: [
         {
-            code: "var moment = require('moment')",
+            code: "var moment = require('moment')"
         },
         {
             code: "moment.utc()"
@@ -21,6 +28,12 @@ ruleTester.run("moment-parse-options", rule, {
         },
         {
             code: "moment.tz('19/09/2020 12:00', 'Europe/Kiev')"
+        },
+        {
+            code: "import * as moment from 'moment'"
+        },
+        {
+            code: "import moment from 'moment'"
         }
     ],
     invalid: [
@@ -29,6 +42,24 @@ ruleTester.run("moment-parse-options", rule, {
             errors: [
                 {
                     message: MOMENT_LITERAL_EXCEPTION
+                }
+            ]
+        },
+        {
+            code: "import * as literal from 'moment'",
+            errors: [
+                {
+                    message: MOMENT_LITERAL_EXCEPTION,
+                    type: "ImportDeclaration",
+                }
+            ]
+        },
+        {
+            code: "import literal from 'moment'",
+            errors: [
+                {
+                    message: MOMENT_LITERAL_EXCEPTION,
+                    type: "ImportDeclaration",
                 }
             ]
         },
@@ -47,7 +78,6 @@ ruleTester.run("moment-parse-options", rule, {
                     message: MOMENT_TIMEZONE_EXCEPTION
                 }
             ]
-        }
-    ]
+        },
+    ],
 });
-
