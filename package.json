@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-moment",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "plugin with moment rules",
   "keywords": [
     "eslint",
@@ -8,7 +8,11 @@
     "eslint-plugin",
     "eslint-plugin-moment"
   ],
-  "author": "Anton",
+  "author": "Anton Herashchenko <geranton93@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geranton93/eslint-plugin-moment"
+  },
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha tests --recursive"
