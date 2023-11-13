@@ -1,12 +1,21 @@
 {
   "name": "eslint-plugin-moment",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "plugin with moment rules",
   "keywords": [
     "eslint",
     "eslintplugin",
     "eslint-plugin",
-    "eslint-plugin-moment"
+    "eslint-plugin-moment",
+    "moment",
+    "date",
+    "time",
+    "linting",
+    "static analysis",
+    "code quality",
+    "date linting",
+    "date rules",
+    "rules"
   ],
   "author": "Anton Herashchenko <geranton93@gmail.com>",
   "repository": {
@@ -21,11 +30,11 @@
     "requireindex": "~1.2.0"
   },
   "devDependencies": {
-    "eslint": "^7.15.0",
-    "mocha": "^8.2.1"
+    "eslint": "^8.53.0",
+    "mocha": "^10.2.0"
   },
   "engines": {
     "node": ">=0.10.0"
   },
-  "license": "ISC"
+  "license": "MIT"
 }
