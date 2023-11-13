@@ -1,19 +1,22 @@
 # eslint-plugin-moment
 
-Plugin with moment rules for eslint. 
-- Prevents usage of moment's default constructor function and other literal for moment valiable declaration except `moment`.
+ESLint plugin with rules for moment.js to ensure consistent and error-free code when working with dates and times.
+
+- Prevents usage of moment's default constructor function and other literals for moment variable declarations except `moment`.
+- Enhances code quality by enforcing best practices when working with moment.js.
+
 
 ## Installation
 
-You'll first need to install [ESLint](http://eslint.org):
+Before using `eslint-plugin-moment`, make sure you have ESLint installed:
 
-```
-$ npm i eslint --save-dev
+```bash
+$ npm install eslint --save-dev
 ```
 
-Next, install `eslint-plugin-moment`:
+Now, install `eslint-plugin-moment`:
 
-```
+```bash
 $ npm install eslint-plugin-moment --save-dev
 ```
 
@@ -96,3 +99,11 @@ moment.tz();
 moment.tz("19/09/2020", "Europe/Kiev");
 
 ```
+
+## Contributing
+
+We welcome contributions! If you find a bug or have a suggestion, please [open an issue](https://github.com/geranton93/eslint-plugin-moment/issues) or [create a pull request](https://github.com/geranton93/eslint-plugin-moment/pulls).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
